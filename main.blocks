@@ -1,0 +1,81 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="HI7kbDz!06Ul_zvs2}aS">Player</variable><variable type="KIND_SpriteKind" id="!N}F#-*!b0IHIA}(:58X">Projectile</variable><variable type="KIND_SpriteKind" id="+Tq+oE%vcV%)LT~j;oNN">Food</variable><variable type="KIND_SpriteKind" id="*74:],jh#7Or_#26^h)#">Enemy</variable><variable id="b~d78@}sKWY/##mzMPGg">car1</variable><variable id="Y1Zit[=cOvYPa9*=:5r2">mySprite</variable><variable id="I/fm3Y~naXhX^ga!M)@4">car2</variable><variable id="Fn0-tt^-YhoVTCGl}Urr">car3</variable><variable id="OdNM|,35j.A6woJ({`T$">car4</variable><variable id="2S-mI/HBw;`$(Aa.M}=j">car5</variable><variable id="D!AUdV*+=e_l7IqA_6ot">randomBand</variable><variable type="BLOCKLY_TILESET_TYPE" id="pF#V,R`X@D*xaK4}13%O">0;16;16;0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</variable><variable type="BLOCKLY_TILESET_TYPE" id="5[e!ltxl!Pn;j/euJp%r">1;16;16;ccccccdcccccccccccccccdcccccccccccccccdcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccdcccccccccccccccdcccccccccccccccdcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccdcccccccccccccccdcccccccccccccccdccccccccccccccccccccccccc</variable></variables><block type="function_definition" x="-190" y="-350"><mutation name="generateCar" functionid="qf6V9YK,ykAqtf||C%xS"/><field name="function_name"/><statement name="STACK"><block type="variables_set"><field name="VAR" id="D!AUdV*+=e_l7IqA_6ot">randomBand</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="device_random"><value name="min"><shadow type="math_number"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number"><field name="NUM">4</field></shadow></value></block></value><next><block type="variables_set"><field name="VAR" id="b~d78@}sKWY/##mzMPGg">car1</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . 8 8 c c 8 8 . . . . 
+. . . . . 8 6 6 6 6 6 6 8 . . . 
+. . . . 6 c 6 6 6 6 6 6 c 6 . . 
+. . . 8 6 c 9 6 6 6 6 6 c 6 8 . 
+. . . f 6 6 9 6 6 6 6 6 c 6 f . 
+. . . f 6 6 9 6 6 6 6 6 6 6 f . 
+. . . f 6 6 9 6 6 6 6 6 6 6 f . 
+. . . f 6 c 6 9 9 6 6 6 c 6 f . 
+. . . 8 6 c 8 c c c c 8 c 6 8 . 
+. . . 8 6 8 c b b b b c 8 6 8 . 
+. . . 8 6 8 b b b b b b 8 6 8 . 
+. . . 8 8 8 8 8 8 8 8 8 8 8 8 . 
+. . . f 8 d 8 8 8 8 8 8 d 8 f . 
+. . . f 8 6 d 8 8 8 8 d 6 8 f . 
+. . . f f 8 8 8 8 8 8 8 8 f f . 
+. . . . f f . . . . . . f f . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="spritesetpos"><value name="sprite"><block type="variables_get"><field name="VAR" id="b~d78@}sKWY/##mzMPGg">car1</field></block></value><value name="x"><shadow type="positionPicker"><field name="index">46</field></shadow><block type="math_arithmetic"><field name="OP">ADD</field><value name="A"><shadow type="math_number"><field name="NUM">46</field></shadow></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="math_arithmetic"><field name="OP">MULTIPLY</field><value name="A"><shadow type="math_number"><field name="NUM">16</field></shadow></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get"><field name="VAR" id="D!AUdV*+=e_l7IqA_6ot">randomBand</field></block></value></block></value></block></value><value name="y"><shadow type="positionPicker"><field name="index">94</field></shadow></value><next><block type="spritesetvel"><value name="sprite"><block type="variables_get"><field name="VAR" id="b~d78@}sKWY/##mzMPGg">car1</field></block></value><value name="vx"><shadow type="spriteSpeedPicker"><field name="speed">0</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker"><field name="speed">-50</field></shadow><block type="math_arithmetic"><field name="OP">MULTIPLY</field><value name="A"><shadow type="math_number"><field name="NUM">-1</field></shadow></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="math_arithmetic"><field name="OP">ADD</field><value name="A"><shadow type="math_number"><field name="NUM">50</field></shadow></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="math_arithmetic"><field name="OP">MULTIPLY</field><value name="A"><shadow type="math_number"><field name="NUM">20</field></shadow></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get"><field name="VAR" id="D!AUdV*+=e_l7IqA_6ot">randomBand</field></block></value></block></value></block></value></block></value></block></next></block></next></block></next></block></statement></block><block type="gameinterval" x="0" y="0"><value name="period"><shadow type="timePicker"><field name="ms">500</field></shadow></value><statement name="HANDLER"><block type="function_call"><mutation name="generateCar" functionid="qf6V9YK,ykAqtf||C%xS"/></block></statement></block><block type="pxt-on-start" x="0" y="340"><statement name="HANDLER"><block type="variables_set"><field name="VAR" id="b~d78@}sKWY/##mzMPGg">car1</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . e e c c e e . . . . 
+. . . . . e 2 2 2 2 2 2 e . . . 
+. . . . 2 c 2 2 2 2 2 2 c 2 . . 
+. . . e 2 c 4 2 2 2 2 2 c 2 e . 
+. . . f 2 2 4 2 2 2 2 2 c 2 f . 
+. . . f 2 2 4 2 2 2 2 2 2 2 f . 
+. . . f 2 2 4 2 2 2 2 2 2 2 f . 
+. . . f 2 c 2 4 4 2 2 2 c 2 f . 
+. . . e 2 c e c c c c e c 2 e . 
+. . . e 2 e c b b b b c e 2 e . 
+. . . e 2 e b b b b b b e 2 e . 
+. . . e e e e e e e e e e e e . 
+. . . f e d e e e e e e d e f . 
+. . . f e 2 d e e e e d 2 e f . 
+. . . f f e e e e e e e e f f . 
+. . . . f f . . . . . . f f . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="tilemap_editor"><field name="tilemap">tiles.createTilemap(
+            hex`0a00280003010404040404040203030104040404040402030301040404040404020303010404040404040203030104040404040402030301040404040404020303010404040404040203030104040404040402030301040404040404020303010404040404040203030104040404040402030301040404040404020303010404040404040203030104040404040402030301040404040404020303010404040404040203000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+            img`
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+`,
+            [myTiles.tile0,sprites.castle.tilePath6,sprites.castle.tilePath4,sprites.castle.tilePath5,myTiles.tile1],
+            TileScale.Sixteen
+        )</field></block></next></block></statement></block></xml>
